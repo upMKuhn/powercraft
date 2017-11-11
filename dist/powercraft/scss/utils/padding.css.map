@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "padding.css",
+	"sources": [
+		"../../../../scss/utils/padding.scss"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,mBAAmB,AAAC,CAChB,OAAO,CAAE,IAAI,CAChB"
+}

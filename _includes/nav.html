@@ -1,0 +1,24 @@
+<nav class="wood-image u-height--page-half padding--gutter-lg">
+
+	<div class="navbar-overlay">
+			<div class="navbar-waste-space">
+					<img src="/img/powercraft-new.png" alt="logo powercraftgmbh" />
+				</div>
+		
+				<ul class="page-navbar navbar-main">
+						{% for node in site.pages %}
+						{% if node.title && page.url == node.url %}
+							<li class="nav-item">
+								<a href="{{node.url}}" class="nav-link active">{{node.title}} <span class="sr-only">(current)</span></a>
+							</li>
+						{% elsif node.title %}
+							<li>
+								<a href="{{node.url}}" class="nav-link">{{node.title}}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+	</div>
+</nav>
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "PowerCraft",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Martin Kuhn"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/upMKuhn/PowerCraft",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}

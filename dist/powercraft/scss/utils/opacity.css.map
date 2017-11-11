@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "opacity.css",
+	"sources": [
+		"../../../../scss/utils/opacity.scss"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,gBAAgB,AAAA,CACZ,OAAO,CAAE,GAAG,CACf"
+}

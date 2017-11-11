@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "navbar-brand.css",
+	"sources": [
+		"../../../../scss/elements/navbar-brand.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAc,aAAD,CAAC,GAAG,AAAA,CACb,MAAM,CAAE,IAAI,CACf"
+}
