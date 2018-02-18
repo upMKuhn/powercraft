@@ -15,7 +15,7 @@ module.exports = function(grunt) {
       styles: {
         files: [{
           expand: true,
-          src: ['scss/**/*.scss'],
+          src: ['scss/**/*.scss', 'bower_components/bootstrap/scss/**/*.scss'],
           dest: 'dist/powercraft',
           ext: '.css'
         }]
@@ -40,7 +40,6 @@ module.exports = function(grunt) {
       css: {
         src: [
           'bower_components/tether/dist/css/tether.min.css',
-          'bower_components/bootstrap/dist/css/bootstrap.min.css',
           'dist/powercraft/**/*.css',
       ],
         dest: 'dist/powercraft-and-dependencies.min.css',
