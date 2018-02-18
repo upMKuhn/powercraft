@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         },
       },
       livereload: {
-        options: { livereload: true },
+        options: { livereload: false },
         files: ['dist/**/*'],
       },
     },
