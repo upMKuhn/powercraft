@@ -2,27 +2,27 @@
 <picture>
     <!-- sm-->
     <source 
-        srcset="{{ "#{{include.baseSrc}}-m.jpeg" | relative_url}}" 
+        srcset="{{ "#{{include.baseSrc | relative_url}}-m.jpeg"}}" 
         media="(max-width: 768px)"
     >
     <!-- L-->
       <source 
-        srcset="{{ "#{{include.baseSrc}}-l.jpeg" | relative_url}}" 
+        srcset="{{ "#{{include.baseSrc | relative_url}}-l.jpeg"}}" 
         media="(max-width: 1200)"
     >
     <!-- XL-->
     <source 
-        srcset="{{ "#{{include.baseSrc}}-xl.jpeg" | relative_url}}" 
+        srcset="{{ "#{{include.baseSrc | relative_url}}-xl.jpeg"}}" 
         media="(max-width: 1920px)"
     >
     <!-- XXL-->
     <source 
-        srcset="{{ "#{{include.baseSrc}}-xxl.jpeg" | relative_url}}" 
+        srcset="{{ "#{{include.baseSrc | relative_url}}-xxl.jpeg"}}" 
         media="(min-width: 1920px)"
     >
 
     <img 
-      srcset="{{ "#{{include.baseSrc}}-l.jpeg" | relative_url}}" 
+      srcset="{{ "#{{include.baseSrc | relative_url}}-l.jpeg"}}" 
       alt="PowerCraft NEW ENERGY"
       class="{{include.class}}"
     />
