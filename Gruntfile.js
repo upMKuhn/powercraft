@@ -26,6 +26,23 @@ module.exports = function(grunt) {
       options: {
         separator: '\n',
       },
+
+      js: {
+        footer: '\n',
+        banner: '\n',
+        src: [
+          'js/**/*.js',
+      ],
+        dest: 'dist/powercraft.js',
+      },
+
+      css: {
+        src: [
+          'dist/powercraft/**/*.css',
+      ],
+        dest: 'dist/powercraft.min.css',
+      },
+
       jsDependencies: {
         footer: '\n',
         banner: '\n',
@@ -33,16 +50,14 @@ module.exports = function(grunt) {
           'bower_components/jquery/dist/jquery.min.js',
           'bower_components/tether/dist/js/tether.min.js',
           'bower_components/bootstrap/dist/js/bootstrap.min.js',
-          'js/**/*.js',
       ],
-        dest: 'dist/powercraft-and-dependencies.min.js',
+        dest: 'dist/powercraft-dependencies.min.js',
       },
-      css: {
+      cssDependencies: {
         src: [
           'bower_components/tether/dist/css/tether.min.css',
-          'dist/powercraft/**/*.css',
       ],
-        dest: 'dist/powercraft-and-dependencies.min.css',
+        dest: 'dist/powercraft-dependencies.min.css',
       },
     },
     
@@ -53,8 +68,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'dist/powercraft-and-dependencies.min.js': ['dist/powercraft-and-dependencies.js'],
-          'dist/powercraft-and-dependencies.min.css': ['dist/powercraft-and-dependencies.css']
+          'dist/powercraft.min.js': ['dist/powercraft.js'],
         }
       }
     },
@@ -62,7 +76,7 @@ module.exports = function(grunt) {
     watch: {
       mywatch: {
         files: ['scss/**/*.scss', 'js/**/*.js', '**/*.html', "!_site/**/*.*"],
-        tasks: ['sass', 'concat'],
+        tasks: ['sass', 'concat', 'uglify'],
         options: {
           interrupt: true,
           spawn: true,
@@ -77,5 +91,5 @@ module.exports = function(grunt) {
   });
 
 
-  grunt.registerTask('default', ['sass', 'concat']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify']);
 };
