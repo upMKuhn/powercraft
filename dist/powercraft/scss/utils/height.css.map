@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "height.css",
-	"sources": [
-		"../../../../scss/utils/height.scss"
-	],
-	"names": [],
-	"mappings": "AAEA,AAAA,eAAe,AAAA,CACX,MAAM,CAAE,IAAI,CACf,AAED,AAAA,oBAAoB,AAAA,CAChB,MAAM,CAAE,GAAG,CACd"
-}

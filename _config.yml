@@ -29,7 +29,7 @@ plugins:
   - jekyll-feed
 exclude: ['bower_components', 'node_modules']
 languages: ["en", "de", "fr"]
-exclude_from_localizations: ["scss", "dist", "node_modules", ".sass-cache", 'img' , 'js', 'bower_components']
+exclude_from_localizations: ["assets", "dist", "node_modules", ".sass-cache", 'bower_components']
 
 
 # Exclude from processing.
