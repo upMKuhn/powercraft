@@ -1,0 +1,29 @@
+
+<picture>
+    <!-- sm-->
+    <source 
+        srcset="{{ "#{{include.baseSrc}}-m.jpeg" | relative_url}}" 
+        media="(max-width: 768px)"
+    >
+    <!-- L-->
+      <source 
+        srcset="{{ "#{{include.baseSrc}}-l.jpeg" | relative_url}}" 
+        media="(max-width: 1200)"
+    >
+    <!-- XL-->
+    <source 
+        srcset="{{ "#{{include.baseSrc}}-xl.jpeg" | relative_url}}" 
+        media="(max-width: 1920px)"
+    >
+    <!-- XXL-->
+    <source 
+        srcset="{{ "#{{include.baseSrc}}-xxl.jpeg" | relative_url}}" 
+        media="(min-width: 1920px)"
+    >
+
+    <img 
+      srcset="{{ "#{{include.baseSrc}}-l.jpeg" | relative_url}}" 
+      alt="PowerCraft NEW ENERGY"
+      class="{{include.class}}"
+    />
+  </picture>
