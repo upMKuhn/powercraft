@@ -1,4 +1,40 @@
+
+@import './responsiveness/hero.scss';
+
 img {
-    max-width: 100%;
-    height: auto;
+    line-height: 0;
+    vertical-align: middle;
+    display: block;
 }
+
+
+.u-flex-responsive{
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        
+        .u-flex--gap-small {
+            margin-bottom: 4px;
+        }
+
+        .u-flex--gap {
+            margin-bottom: 16px;
+        }
+
+    };
+
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+
+
+        .u-flex--gap-small {
+            margin-right: 4px;
+        }
+
+        .u-flex--gap {
+            margin-right: 16px;
+        }
+    }
+}
+
+

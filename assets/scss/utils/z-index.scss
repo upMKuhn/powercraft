@@ -1,0 +1,15 @@
+
+$z-index--deep-underground: -2;
+$z-index--underground:  -1;
+$z-index--ground:       0;
+$z-index--hill:         1;
+$z-index--sky:          2;
+$z-index--space:        4;
+
+.u-z-index--deep-underground { z-index: $z-index--deep-underground; }
+.u-z-index--underground { z-index: $z-index--underground; }
+.u-z-index--ground { z-index: 0; }
+.u-z-index--hill { z-index: 1; }
+.u-z-index--sky { z-index: 2; }
+.u-z-index--space { z-index: 4; }
+

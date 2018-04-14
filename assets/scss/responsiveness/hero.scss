@@ -1,0 +1,39 @@
+
+
+@include media-breakpoint-down(sm) {
+    .hero {
+        height: 100vh; 
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .hero {
+        height: 50vh; 
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .hero {
+        height: 70vh; 
+    }
+}
+
+.hero {
+    width: 100vw;
+}
+
+
+.hero--overlay {
+    &:before {
+        content: '';
+        filter: blur(40px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.1;
+        height: inherit;
+        background-color: $blue;
+    }
+}

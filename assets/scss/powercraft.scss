@@ -1,9 +1,8 @@
 
-@import 'theme.scss';
+@import 'theme/variables.scss';
 @import '../../bower_components/bootstrap/scss/bootstrap.scss';
+@import 'utils/utils.scss';
 @import 'responsive.scss';
+@import 'theme.scss';
+@import 'elements/elements.scss';
 
-
-body {
-    background: #eee;
-}

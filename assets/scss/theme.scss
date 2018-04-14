@@ -1,16 +1,40 @@
-/**/
-@import '../../bower_components/bootstrap/scss/functions.scss';
-@import '../../bower_components/bootstrap/scss/_variables.scss';
+@import './theme/hero-bridge.scss';
 
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:"Open Sans",Arial, Helvetica, sans-serif;
 }
+
+
+h1,h2,h3,h4,h5 {
+    text-align: center;
+}
+
+
+.nav-item {
+    color: black;
+    font-size: 27px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
 
 .carousel-control-prev, .carousel-control-next {
+
     visibility: hidden;
 
-    &:hover {
-        visibility: visible;
+    &:hover { 
+        visibility: visible !important;
     }
-}
+} 
+
+
+@import '../../bower_components/bootstrap/scss/_variables.scss';
+
+$navbar-dark-color:                 rgba($white, 0) !default;
+$navbar-dark-hover-color:           rgba($white,.75) !default;
+$navbar-dark-active-color:          rgba($white,1) !default;
+$navbar-dark-disabled-color:        rgba($white,.25) !default;
+$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-dark-toggler-border-color:  rgba($white,1) !default;
+

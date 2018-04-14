@@ -1,28 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark {{include.class}}">
 
-	<a class="navbar-brand pt-2" href="/">
-		{% include icons/logo-dark.html height="55px"%}
+	<a class="navbar-brand pt-3" href="/">
+		<img src="/assets/img/logo-light/logo-new.png" class="p-2" height="70px">
 	</a>
 	
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
+		<ul class="navbar-nav ml-auto">
 				{% for node in site.pages %}
 				{% if node.title && page.url == node.url %}
 					<li class="nav-item active pl-1 pr-1">
-						<a href="{{node.url}}">{{node.title}} <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="{{node.url}}">{{node.title}} <span class="sr-only">(current)</span></a>
 					</li>
 				{% elsif node.title %}
 					<li class="nav-item pl-1 pr-1">
-						<a href="{{node.url}}" class="nav-link">{{node.title}}</a>
+						<a class="nav-link" href="{{node.url}}" class="nav-link">{{node.title}}</a>
 					</li>
 				{% endif %}
 			{% endfor %}
 		</ul>
 	</div>
 </nav>
-
-

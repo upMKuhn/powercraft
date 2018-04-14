@@ -1,0 +1,9 @@
+
+@include media-breakpoint-up(md) {
+
+    .u-position-md--top-50 {
+        position: relative;
+        top: -25%;
+    }
+
+}

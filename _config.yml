@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "powercraft"
+baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  UPMkuhn
 
@@ -28,11 +28,12 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 exclude: ['bower_components', 'node_modules']
-languages: ["en", "de", "fr"]
+#languages: ["en", "de", "fr"]
+languages: ["en"]
 exclude_from_localizations: ["assets", "dist", "node_modules", ".sass-cache", 'bower_components']
 
 
-livereload: true     # You no longer need to include --livereload
+livereload: false     # You no longer need to include --livereload
 reload_port: 5678    # If you don't want to use the default port
 
 # Exclude from processing.

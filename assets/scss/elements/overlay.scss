@@ -1,0 +1,16 @@
+
+
+.e-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: inherit;
+}
+
+.e-overlay--blured {
+    filter: blur(6px);
+    background: rgba(55,55,55,0.5);
+}
+

@@ -8,11 +8,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     sass: {
-      options: {
-        sourceMap: true,
-        'outputStyle': 'compressed'
-      },
       styles: {
+        options: {
+          sourceMap: true,
+          'outputStyle': 'compressed'
+        },
         files: [{
           expand: false,
           src: ['assets/scss/powercraft.scss'],
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 
     watch: {
       mywatch: {
-        files: ['assets/**/*.*'],
+        files: ['./assets/js/*.*', './assets/scss/**/*', './assets/img/*.*'],
         tasks: ['sass', 'concat'],
         options: {
           interrupt: true,
@@ -71,7 +71,11 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: { livereload: false },
-        files: ['dist/**/*'],
+        files: [
+          './assets/js/**/*.*', 
+          './assets/scss/**/*.*', 
+          './assets/img/**/*.*'
+        ],
       },
     },
 
