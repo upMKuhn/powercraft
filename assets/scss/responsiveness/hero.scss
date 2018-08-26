@@ -14,12 +14,13 @@
 
 @include media-breakpoint-up(md) {
     .hero {
-        height: 70vh; 
+        height: 93vh; 
     }
 }
 
 .hero {
     width: 100vw;
+    max-width:100%;
 }
 
 

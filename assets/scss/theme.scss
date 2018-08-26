@@ -1,4 +1,4 @@
-@import './theme/hero-bridge.scss';
+@import './theme/heros.scss';
 
 
 html {
@@ -11,11 +11,17 @@ h1,h2,h3,h4,h5 {
 }
 
 
+.navbar {
+    background: rgba(255,255,255,0.95);
+}
+.nav-link {
+    color: #000 !important;
+}
+
 .nav-item {
-    color: black;
-    font-size: 27px;
     line-height: 40px;
     font-weight: 700;
+    font-size: 16px !important;
 }
 
 

@@ -43,6 +43,8 @@ module.exports = function(grunt) {
           'bower_components/jquery/dist/jquery.min.js',
           'bower_components/tether/dist/js/tether.min.js',
           'bower_components/bootstrap/dist/js/bootstrap.min.js',
+          'node_modules/video.js/dist/video.min.js',
+          'node_modules/photoswipe/dist/photoswipe.min.js',
       ],
         dest: 'assets/dist/includes.min.js',
       },
