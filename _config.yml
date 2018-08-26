@@ -25,7 +25,7 @@ github_username:  UPMkuhn
 
 # Build settings
 markdown: kramdown
-plugins:
+plugins_dir:
   - jekyll-feed
 exclude: ['bower_components', 'node_modules']
 #languages: ["en", "de", "fr"]
@@ -33,7 +33,7 @@ languages: ["en"]
 exclude_from_localizations: ["assets", "dist", "node_modules", ".sass-cache", 'bower_components']
 
 
-livereload: false     # You no longer need to include --livereload
+livereload: true     # You no longer need to include --livereload
 reload_port: 5678    # If you don't want to use the default port
 
 # Exclude from processing.
