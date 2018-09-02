@@ -1,5 +1,4 @@
 
-
 @include media-breakpoint-down(sm) {
     .hero--bridge {
         background-position-x: 25%;
@@ -15,7 +14,7 @@
 .hero--bridge {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/powercraft/assets/img/heros/hero-bridge-xxl.jpeg");
+    background-image: url("/assets/img/heros/hero-bridge-xxl.jpeg");
 }
 
 
@@ -24,7 +23,7 @@
     background-size: cover;
     background-position: center;
     background-position-y: 55%;
-    background-image: url("/powercraft/assets/img/heros/powerline.jpg");
+    background-image: url("/assets/img/heros/powerline.jpg");
 }
 
 

@@ -11,6 +11,16 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:  #000 !default;
 
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: (
+  10: 10%,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+) !default;
+
+
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
@@ -44,9 +54,15 @@ $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #7CB342 !default;
+$green-dark: darken($green, 5%);
 $green-light:   #7CB342 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$juri-lightest: #f5f5f5 !default;
+$juri-light: #3f3f3f !default;
+$juri-dark: #111 !default;
+$juri: #3f3f3f !default;
+
 //#7CB342  green
 $colors: (
   blue: $blue,
@@ -57,12 +73,17 @@ $colors: (
   orange: $orange,
   yellow: $yellow,
   green: $green,
+  green-dark: $green-dark,
   green-light: $green-light,
   teal: $teal,
   cyan: $cyan,
   white: $white,
   gray: $gray-600,
-  gray-dark: $gray-800
+  gray-dark: $gray-800,
+  juri-lightest: $juri-lightest,
+  juri-light: $juri-light,
+  juri-dark: $juri-dark,
+  juri: $juri
 ) !default;
 
 $theme-colors: (
@@ -73,5 +94,10 @@ $theme-colors: (
   warning: $yellow,
   danger: $red,
   light: $white,
-  dark: #f5f5f5
+  dark: $juri-dark,
+  juri-lightest: $juri-lightest,
+  juri-light: $juri-light,
+  juri-dark: $juri-dark,
+  juri: $juri,
+  green-dark: $green-dark
 ) ;

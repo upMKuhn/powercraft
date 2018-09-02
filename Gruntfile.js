@@ -4,7 +4,18 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  
+  grunt.loadNpmTasks('grunt-css-url-replace');
+
+
+  var readYaml = require('read-yaml');
+  let theBaseDir = '';
+  readYaml.sync('_config.yml', (err, data) => {
+      if (err) throw err;
+      baseDir = data.baseurl;
+  });
+
+
+
   grunt.initConfig({
 
     sass: {
@@ -20,6 +31,17 @@ module.exports = function(grunt) {
           ext: '.css'
         }]
       }
+    },
+
+    css_url_replace: {
+        options: {
+          staticRoot: '/BLAAAA'
+        },
+        replace: {
+          files: {
+            'assets/dist/powercraft.min.css2': ['assets/dist/powercraft.min.css']
+          }
+        }
     },
 
     concat: {
@@ -49,7 +71,6 @@ module.exports = function(grunt) {
         dest: 'assets/dist/includes.min.js',
       },
     },
-    
 
     uglify: {
       options: {
@@ -61,11 +82,11 @@ module.exports = function(grunt) {
         }
       }
     },
-
+    
     watch: {
       mywatch: {
         files: ['./assets/js/*.*', './assets/scss/**/*', './assets/img/*.*'],
-        tasks: ['sass', 'concat'],
+        tasks: ['sass', 'css_url_replace', 'concat'],
         options: {
           interrupt: true,
           spawn: true,
@@ -84,5 +105,5 @@ module.exports = function(grunt) {
   });
 
 
-  grunt.registerTask('default', ['sass', 'concat', 'uglify']);
+  grunt.registerTask('default', ['sass', 'css_url_replace', 'concat', 'uglify']);
 };

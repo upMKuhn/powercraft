@@ -16,25 +16,33 @@
 title: Powercraft
 email: -info@powercraftgmbh.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "powercraft"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  UPMkuhn
+    Write an awesome description for your new site here. You can edit this
+    line in _config.yml. It will appear in your document head meta (for
+    Google search results) and in your feed.xml site description.
+baseurl: ''
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
+github_username: UPMkuhn
 
 # Build settings
 markdown: kramdown
+sass:
+    sass_dir: assets/scss
+    style: compact # possible values: nested expanded compact compressed
 plugins_dir:
-  - jekyll-feed
+    - jekyll-feed
 exclude: ['bower_components', 'node_modules']
 #languages: ["en", "de", "fr"]
-languages: ["en"]
-exclude_from_localizations: ["assets", "dist", "node_modules", ".sass-cache", 'bower_components']
+languages: ['en']
+exclude_from_localizations: ['assets', 'dist', 'node_modules', '.sass-cache', 'bower_components']
+
+collections:
+  - home
+
+host: 0.0.0.0
+livereload: true # You no longer need to include --livereload
+reload_port: 5678 # If you don't want to use the default port
 
 
-livereload: true     # You no longer need to include --livereload
-reload_port: 5678    # If you don't want to use the default port
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

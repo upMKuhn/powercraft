@@ -5,14 +5,23 @@ html {
     font-family:"Open Sans",Arial, Helvetica, sans-serif;
 }
 
+body{
+    font-size: 1em;
+    color: #3f3f3f;
+}
 
 h1,h2,h3,h4,h5 {
+    font-family: Arvo;
     text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: Arvo;
 }
 
 
 .navbar {
-    background: rgba(255,255,255,0.95);
 }
 .nav-link {
     color: #000 !important;

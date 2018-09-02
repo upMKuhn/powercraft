@@ -1,10 +1,44 @@
 
-.u-text--12 {
-    font-size: 12pt;
+
+@include media-breakpoint-up(lg) {
+
+    .u-text--massive {
+        font-size: 10em;
+    }
+
 }
 
-.u-text--massive {
-    font-size: 64pt;
+@include media-breakpoint-down(lg) {
+
+    .u-text--massive {
+        font-size: 7em;
+    }
+
+}
+
+
+@include media-breakpoint-down(sm) {
+
+    .u-text--massive {
+        font-size: 4em;
+    }
+
+}
+
+.u-text--large {
+    font-size: 1.5em;
+}
+
+.u-text--medium {
+    font-size: 1.2em;
+}
+
+.u-text--12 {
+    font-size: 1em;
+}
+
+.u-text--small {
+    font-size: 0.9em;
 }
 
 .u-text-shadow {

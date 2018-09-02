@@ -1,7 +1,9 @@
 
 
+
+
 .wood-image {
-    background: url('/img/wood_background-dark.jpg');
+   // background: url('/img/wood_background-dark.jpg');
     /* Set a specific height */
 
     /* Create the parallax scrolling effect */
@@ -11,6 +13,31 @@
     background-size: cover;
 }
 
+.img-parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+.img--gray {
+    @include filter(grayscale, 100%);
+    font-size: inherit;
+}
+
+.img-bk--advanture {
+    background-image: url('/assets/img/adventure.jpg');
+}
+
 .u-icon--small {
     height: 48px;
     width: 48px;
@@ -18,3 +45,4 @@
         fill: #fff !important;
     }
 }
+
