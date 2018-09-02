@@ -9,6 +9,7 @@
         "*lock*": true,
         "Guardfile": true,
         "bower_components": true,
+        ".sass*": true,
         ".jekyll*": true,
         "node_modules": true,
         "**/.DS_Store": true

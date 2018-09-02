@@ -11,19 +11,13 @@
     }
 }
 
-.hero--bridge {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("/assets/img/heros/hero-bridge-xxl.jpeg");
-}
-
 
 .hero--powerline {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-position-y: 55%;
-    background-image: url("/assets/img/heros/powerline.jpg");
+    background-image: asset_url("heros/powerline.jpg @magick:resize=300x300");
 }
 
 

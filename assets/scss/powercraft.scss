@@ -1,10 +1,10 @@
-
-@import 'theme/variables.scss';
-@import '../../node_modules/video.js/src/css/video-js.scss';
+---
+---
+@import 'theme/variables';
 @import '../../node_modules/photoswipe/src/css/main.scss';
 @import '../../bower_components/bootstrap/scss/bootstrap.scss';
+@import 'elements/elements.scss';
 @import 'utils/utils.scss';
 @import 'responsive.scss';
 @import 'theme.scss';
-@import 'elements/elements.scss';
 

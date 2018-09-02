@@ -105,5 +105,5 @@ module.exports = function(grunt) {
   });
 
 
-  grunt.registerTask('default', ['sass', 'css_url_replace', 'concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'uglify']);
 };

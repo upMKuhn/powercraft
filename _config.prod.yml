@@ -1,0 +1,8 @@
+source_maps: false
+destination: "_site/"
+compression: true
+gzip: true
+caching:
+  path: ".jekyll-cache/assets"
+  type: file
+  enabled: true

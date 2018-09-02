@@ -4,94 +4,25 @@ layout: plain
 url: /home
 ---
 
+    
 <div class="hero hero--overlay hero--powerline d-flex flex-column u-z-index--deep-underground hero--blured">
+    
     <div class="h-25"> </div>
     <div class=" u-z-index--sky text-white text-center mb-sm-5">
         <h1 class=" u-text--massive u-text-shadow"> GET ON THE</h1>
         <div class="font-weight-bolder conatiner mx-auto my-3 my-xs-5 my-sm-5">
-            <h1 class="u-background--green u-text--massive d-sm-inline py-4 px-sm-7 shadow-lg"> GRID </h1>
+            <h1 class="u-background--green u-text--massive d-sm-inline py-3 px-sm-6 shadow-lg"> GRID </h1>
         </div>
-        <h5> Strom und warme ohne ressourcen verbrauch </h5>
-    </div>
-    <div class="e-overlay e-overlay--blured u-z-index--ground">
+        <h5 class="font-weight-bold"> Strom und Wärme ohne Ressourcen verbrauch </h5>
     </div>
 </div>
+
 
 {% include nav.html class="u-z-index--sky text-dark shadow sticky-top" %}
+
 <article>
-
-<section class="py-6 text-juri container  text-center">
-    <h1 class="text-juri-light">
-        Unser Unternehmen
-    </h1>
-    <summary class="d-inline u-text--large mb-2">
-            Projektentwicklung für die autarke und rentable Produktion 
-            von 
-            <span class="text-green-dark font-weight-bold">Strom </span>
-            und 
-            <span class="text-green-dark font-weight-bold">Wärme</span> 
-            durch 
-            <span class="text-green-dark font-weight-bold"> nachwachsende Rohstoffe </span>
-            mit Hilfe 
-            unserer Holzvergasertechnologie.
-    </summary>
-</section>
-
-<section class="bg-juri-lightest text-center p-5 text-juri">
-    <h2>Was machen wir</h2>
-    <p class="container u-text--medium">
-        Unsere Projekte beinhalten industrielle 
-        <span class="text-green-dark"> Holzvergasungsanlagen </span>
-        mit <span class="text-green-dark"> 2.200.000 Kwh </span> pro Jahr. Wir beschäftigen uns mit der Entwicklung 
-        erneuerbarer Technologien seit 
-        <br/> <span class="text-green-dark">mehr als 12 Jahren</span> 
-    </p>
-    <div class="container">
-        <img src="/assets/img/old/Logo.png"  class="mx-auto mt-4 img--gray" height="30px" />
-    </div>
-</section>
-
-
-<!-- Philosophie-->
-<section class="text-center p-5 text-juri container u-text--medium">
-        <h1>Unsere Philosophie</h2> 
-        <p>
-            Im Vordergrund steht die Umwandlung von Biomasse, wetterunabhängig in Strom und Wärme. 
-            Es können heimische und nachwachsende Resthölzer verwendet werden. Diese fallen bei der Durchforstung 
-            oder bei der Holzverarbeitung  an. Es können alle europäische Sorten gehackt und getrocknet werden. 
-        </p>
-</section>
-    
-
-<!-- Mission statement parallax-->
-<section class="img-bk--advanture img-parallax text-center text-uppercase text-white u-text--large">
-    <div class="">
-
-    </div>
-    <summary class="container py-7">
-        Wir streben danach einen aktiven Beitrag fort von fossilen Bresstoffen, hin zu einem
-        nachhaltigen Lebensstil zu leisten.
-    </summary>
-</section>
-
-
-
-
-<article class="p-3">
-    <div class="u-width--50v py-4 mx-auto">
-        <video id="my-video" class="embed-responsive video-js vjs-default-skin vjs-big-play-centered" width controls preload="none"
-            poster="{{ " /assets/video/powercraft.cover.png " }}" data-setup='{"fluid": true}'>
-            <source src="/assets/video/powercraft.mp4" type='video/mp4'>
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a web browser that
-                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-        </video>
-    </div>
-</article>
-
-<div class="d-one">
-    {% include sites/technik.html %}
-</div>
-
+    {% assign home_components = site.home | sort: 'index' %}
+    {% for home_item in home_components %}
+        {{ home_item | markdownify }}
+    {% endfor %}
 </article>

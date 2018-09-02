@@ -5,7 +5,8 @@
 	"main": "app.js",
 	"scripts": {
 		"serve": "./nginx.sh",
-		"stop": "nginx -s stop",
+        "stop": "nginx -s stop",
+        "build:prod": "grunt && jekyll b --config _config.yml,_config.prod.yml",
 		"build:watch": "jekyll build --watch --incremental",
 		"watch": "grunt && grunt watch",
 		"test": "echo \"Error: no test specified\" && exit 1"
