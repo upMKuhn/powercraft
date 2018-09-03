@@ -41,6 +41,15 @@ reload_port: 5678 # If you don't want to use the default port
 cdn:
   baseurl: true
 
+source_maps: true
+destination: "_site/"
+compression: false
+gzip: false
+caching:
+  path: ".jekyll-cache/assets"
+  type: file
+  enabled: true
+
 assets:
   sources:
     - assets/dist

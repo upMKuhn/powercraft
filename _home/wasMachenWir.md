@@ -13,5 +13,5 @@ Wir beschäftigen uns mit der Entwicklung erneuerbarer Technologien seit
 {: .text-center p-5 .text-juri .container .u-text--medium .container}
 
 <div class="container">
-    <img src="/assets/img/old/Logo.png"  class="mx-auto mt-4 img--gray" height="30px" />
+    <img src="/assets/img/logo-old.png"  class="mx-auto mt-4 img--gray" height="30px" />
 </div>

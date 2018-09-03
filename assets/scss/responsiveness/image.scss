@@ -1,0 +1,16 @@
+// Retina image
+//
+// Short retina mixin for setting background-image and -size. Note that the
+// spelling of `min--moz-device-pixel-ratio` is intentional.
+@mixin imageResized($imageSrc) {
+    
+    @include media-breakpoint-down(lg) {
+        background-image: url(asset_path("#{$imageSrc} magick:resize=100x100^ magick:gravity=center magick:crop=100x100+0+0 magick:quality=90"));
+    }
+
+        
+    @include media-breakpoint-up(lg) {
+        background-image: url(asset_path("#{$imageSrc}"));
+    }
+    
+  }
