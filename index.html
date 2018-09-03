@@ -5,7 +5,7 @@ url: /home
 ---
 
     
-<div class="hero hero--overlay hero--powerline d-flex flex-column u-z-index--deep-underground hero--blured">
+<div class="img-parallax hero  hero--powerline e-overlay e-overlay--soft-radial d-flex flex-column u-z-index--deep-underground hero--blured">
     
     <div class="h-25"> </div>
     <div class=" u-z-index--sky text-white text-center mb-sm-5">
@@ -21,7 +21,7 @@ url: /home
 {% include nav.html class="u-z-index--sky text-dark shadow sticky-top" %}
 
 <article>
-    {% assign home_components = site.home | sort: 'index' %}
+    {% assign home_components = site.home | where_exp: "item", "item.parent == nil" | sort: 'index' %}
     {% for home_item in home_components %}
         {{ home_item | markdownify }}
     {% endfor %}

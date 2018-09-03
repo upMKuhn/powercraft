@@ -15,8 +15,7 @@
 .hero--powerline {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-position-y: 55%;
+    background-position: bottom;
     @include imageResized("powerline.jpg");
     //background-image: asset_url("heros/powerline.jpg @magick:resize=300x300");
 }

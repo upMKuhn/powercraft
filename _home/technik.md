@@ -1,7 +1,7 @@
 ---
- index: 4
+ index: 100
 ---
-<article class="p-3">
+<article class="p-3 d-none">
     <div class="u-width--50v py-4 mx-auto">
         <video id="my-video" class="embed-responsive video-js vjs-default-skin vjs-big-play-centered" width controls preload="none"
             poster="{{ " /assets/video/powercraft.cover.png " }}" data-setup='{"fluid": true}'>

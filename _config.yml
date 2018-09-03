@@ -35,7 +35,7 @@ collections:
 
 
 host: 0.0.0.0
-livereload: false # You no longer need to include --livereload
+livereload: true # You no longer need to include --livereload
 reload_port: 5678 # If you don't want to use the default port
 
 cdn:
