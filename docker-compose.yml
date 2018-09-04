@@ -6,7 +6,7 @@ jekyll:
   user: "${UID}:${GID}"
   ports:
     - "4000:4000"
-  command: /bin/bash -c "bundle update listen && bundler install --full-index && jekyll clean && rm -rf .jekyll-cache && jekyll b"
+  command: /bin/bash -c "bundle update listen && bundler install --full-index && jekyll clean && rm -rf .jekyll-cache && jekyll s --watch"
   environment:
     - PORT=4000
 web:
