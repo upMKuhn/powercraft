@@ -6,7 +6,7 @@
 
 
 ### Was machen wir
-Unsere Projekte beinhalten **industrielle** Holzvergasungsanlagen
+Unsere Projekte beinhalten die Entwicklung **industrielle** Holzvergasungsanlagen
 mit mehr als <span class="text-green-dark"> 2.200.000 Kwh </span> pro Jahr. 
 Wir beschäftigen uns mit der Entwicklung erneuerbarer Technologien seit   
 <span class="text-green-dark">mehr als 12 Jahren</span> 

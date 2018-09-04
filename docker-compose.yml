@@ -1,0 +1,10 @@
+#nginx to forward request 
+jekyll:
+  hostname: nginx
+  volumes:
+    - './:/jekyll'
+  build: '.'
+  ports:
+    - "8080:8080"
+  environment:
+    - PORT=80
