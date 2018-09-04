@@ -6,3 +6,4 @@
 **/_plugins
 **/.jekyll-cache/
 **/logs/
+logs/*
