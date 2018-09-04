@@ -2,12 +2,11 @@
 jekyll:
   volumes:
     - './src:/jekyll'
-    - 'site:/jekyll/_site'
   build: '.'
   user: "${UID}:${GID}"
   ports:
     - "4000:4000"
-  command: /bin/bash -c "bundle update listen && bundler install --full-index && jekyll clean && rm -rf .jekyll-cache && jekyll s --watch"
+  command: /bin/bash -c "bundle update listen && bundler install --full-index && jekyll clean && rm -rf .jekyll-cache && jekyll b"
   environment:
     - PORT=4000
 web:
@@ -16,7 +15,7 @@ web:
   volumes:
    - ./config/:/etc/nginx
    - ./config/.htaccess:/website/.htaccess
-   - site:/website
+   - ./src/_site:/website
    - ./logs:/siteLogs
   ports:
    - "80:80"
