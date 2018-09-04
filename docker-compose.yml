@@ -1,13 +1,14 @@
 #nginx to forward request 
 jekyll:
-  hostname: nginx
   volumes:
     - './src:/jekyll'
   build: '.'
+  user: ${CURRENT_UID}
   ports:
-    - "8080:8080"
+    - "4000:4000"
+  command: /bin/bash -c "bundle update listen && bundler install --full-index && jekyll clean && rm -rf .jekyll-cache && jekyll b"
   environment:
-    - PORT=80
+    - PORT=4000
 web:
   image: nginx
   volumes:

@@ -145,7 +145,6 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-livereload
   jekyll-multiple-languages-plugin
-  jekyll-watch
   listen (~> 3.1.5)
   mini_magick
   tzinfo-data

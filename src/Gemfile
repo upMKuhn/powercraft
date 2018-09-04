@@ -23,7 +23,6 @@ group :jekyll_plugins do
     gem 'mini_magick'
     gem "jekyll-feed", "~> 0.6"
     gem 'jekyll-livereload'
-    gem 'jekyll-watch'
     gem 'jekyll-admin'
 end
 

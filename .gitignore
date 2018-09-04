@@ -1,8 +1,8 @@
 **/_site
-**/.sass-cache
-**/.jekyll-metadata
+**/.sass-cache/
+**/.jekyll-metadata/
 **/bower_components/
 **/node_modules/
 **/_plugins
-**/.jekyll-cache/*
-**/logs
+**/.jekyll-cache/
+**/logs/
