@@ -49,19 +49,11 @@ module.exports = function(grunt) {
         separator: '\n',
       },
 
-      js: {
-        footer: '\n',
-        banner: '\n',
-        src: [
-          'assets/js/**/*.js',
-      ],
-        dest: 'assets/dist/powercraft.js',
-      },
-
       jsDependencies: {
         footer: '\n',
         banner: '\n',
         src: [
+          'bower_components/popper.js/dist/popper.min.js',
           'bower_components/jquery/dist/jquery.min.js',
           'bower_components/tether/dist/js/tether.min.js',
           'bower_components/bootstrap/dist/js/bootstrap.min.js',
@@ -69,6 +61,15 @@ module.exports = function(grunt) {
           'node_modules/photoswipe/dist/photoswipe.min.js',
       ],
         dest: 'assets/dist/includes.min.js',
+      },
+
+      js: {
+        footer: '\n',
+        banner: '\n',
+        src: [
+          'assets/js/**/*.js',
+      ],
+        dest: 'assets/dist/powercraft.js',
       },
     },
 

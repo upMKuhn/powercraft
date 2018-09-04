@@ -22,6 +22,7 @@
 	},
 	"homepage": "https://github.com/upMKuhn/PowerCraft",
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.3.1",
 		"bower": "^1.8.4",
 		"ejs": "^2.5.6",
 		"express": "^4.15.3",
@@ -32,6 +33,7 @@
 		"normalize.css": "^8.0.0",
 		"photoswipe": "^4.1.2",
 		"picturefill": "^3.0.2",
+		"popper": "^1.0.1",
 		"read-yaml": "^1.1.0",
 		"scss": "^0.2.4",
 		"video.js": "^7.0.5"
