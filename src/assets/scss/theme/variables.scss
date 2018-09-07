@@ -56,7 +56,7 @@ $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #7CB342 !default;
-$green-dark: darken($green, 5%);
+$green-dark: darken(#7CB342, 5%);
 $green-light:   #7CB342 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
@@ -65,7 +65,7 @@ $juri-light: #3f3f3f !default;
 $juri-dark: #111 !default;
 $juri: #3f3f3f !default;
 
-//#7CB342  green
+
 $colors: (
   blue: $blue,
   indigo: $indigo,
@@ -74,7 +74,7 @@ $colors: (
   red: $red,
   orange: $orange,
   yellow: $yellow,
-  green: $green,
+  "green": $green,
   green-dark: $green-dark,
   green-light: $green-light,
   teal: $teal,
@@ -102,5 +102,5 @@ $theme-colors: (
   juri-dark: $juri-dark,
   juri: $juri,
   green-dark: $green-dark,
-  green: $green
+  "green": $green
 ) ;
