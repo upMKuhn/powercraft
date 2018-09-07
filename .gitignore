@@ -7,3 +7,4 @@
 **/.jekyll-cache/
 **/logs/
 logs/*
+config/front.conf
