@@ -1,8 +1,8 @@
 <html>
     <head>
         <title>{{ page.title }}</title>
-        {% asset powercraft.scss async="true" %}
-        {% asset includes.css async="true" %}
+        {% asset powercraft.scss media="none" onload="if(media!='all')media='all'" %}
+        {% asset includes.css   media="none" onload="if(media!='all')media='all'" %}
         <meta charset="utf-8">
         <meta name="HandheldFriendly" content="true">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
