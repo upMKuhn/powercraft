@@ -4,7 +4,7 @@ jekyll:
     - './src:/jekyll'
   build: '.'
   ports:
-    - "4000:4000"
+    - "4500:4000"
   command: /bin/bash -c "bundle update listen && bundler install --full-index && jekyll clean && rm -rf .jekyll-cache && jekyll b"
   environment:
     - PORT=4000
@@ -16,7 +16,7 @@ web:
    - ./src/_site:/website
    - ./logs:/siteLogs
   ports:
-   - "80:80"
+   - "8080:80"
   environment:
    - NGINX_HOST=martkin-kuhn.eu
    - NGINX_PORT=80
