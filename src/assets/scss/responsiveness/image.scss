@@ -13,4 +13,8 @@
         background-image: url(asset_path("#{$imageSrc}"));
     }
     
-  }
+}
+
+.img--cover {
+    object-fit: cover;
+}

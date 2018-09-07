@@ -1,6 +1,6 @@
 
 
-.e-overlay {
+.e-overlay-cover {
     position: relative;
     &:before {
         content: '';
@@ -22,6 +22,39 @@
     &.e-overlay--soft-radial {
         &:before {
             background-image: radial-gradient(rgba(0,0,0, 0.4), rgba(0,255,0, 0.1));
+        }
+    }
+}
+
+//make sure parent has pos relative
+.e-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    
+    &.e-overlay--soft {
+        &:before {
+            background-color: rgba(0,0,0, 0.3);
+        }
+    }
+
+    &.e-overlay--soft-radial {
+        &:before {
+            background-image: radial-gradient(rgba(0,0,0, 0.4), rgba(0,255,0, 0.1));
+        }
+    }
+
+    &.e-overlay--hover-juri {
+        opacity: 0;
+        background: rgba($juri, 0);
+        transition: cubic-bezier(0.39, 0.575, 0.565, 1) all 0.5s;
+        &:hover{
+            background: rgba($juri, 0.7);
+            opacity: 1;
         }
     }
 }

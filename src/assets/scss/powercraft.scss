@@ -1,9 +1,13 @@
 ---
 ---
+@import '/assets/dist/includes.css';
 @import 'theme/variables';
 @import '../../node_modules/photoswipe/src/css/main.scss';
 @import '../../bower_components/bootstrap/scss/bootstrap.scss';
-@import '../../node_modules/font-awesome-scss/scss/font-awesome.scss';
+@import '../../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome.scss';
+@import '../../node_modules/@fortawesome/fontawesome-pro/scss/solid.scss';
+@import '../../node_modules/@fortawesome/fontawesome-pro/scss/regular.scss';
+@import '../../node_modules/@fortawesome/fontawesome-pro/scss/light.scss';
 @import 'elements/elements.scss';
 @import 'utils/utils.scss';
 @import 'responsive.scss';

@@ -30,6 +30,9 @@ exclude_from_localizations: ['assets', 'dist', 'node_modules', '.sass-cache', 'b
 #Collections
 #collections_dir: components
 collections:
+  findYourWayPoints:
+    #sub-collection of home.findYourWay
+    output: true
   home:
     output: true
 

@@ -1,8 +1,9 @@
 ---
+ layout: component/iconItem
  parent: findYourWay
- layout: component/section
+ icon-class: far fa-tree-alt  mb-3 bg-green-dark text-white
+ title: Forstwirtschaft
  index: 0
 ---
 
-## Land-und forstwirtschaftliche Betriebe
 Aus ansonsten kaum vergüteten Rest und Abfallholz entsteht eine eigene neue Wertschöpfungsquelle in Form von verkaufbaren Stromstunden und Trocknungskapazitäten

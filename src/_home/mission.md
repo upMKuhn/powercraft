@@ -1,7 +1,7 @@
 ---
   layout: component/parallax
   index: 3
-  img-class: img-bk--advanture e-overlay e-overlay--soft-radial py-6
+  img-class: img-bk--advanture e-overlay-cover e-overlay--soft-radial py-6
   class: mb-3
 ---
 

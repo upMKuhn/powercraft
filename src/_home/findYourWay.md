@@ -5,13 +5,18 @@
  index: 4
 ---
 
-# Find your own way!
+
+{::options parse_block_html="true" /}
+# Find your own way
 {: .mb-4}
 
-
-{% assign childComponents = site.home  | where: "parent", "findYourWay" | sort: 'index' %}
+{% assign childComponents = site.findYourWayPoints  | sort: 'index' %}
+<div class="d-flex flex-wrap d-flex justify-content-center ">
 {% for child in childComponents %}
-{{ child | markdownify }}
+{::options parse_block_html="false" /}
+{{ child.output | markdownify}}
+{::options parse_block_html="true" /}
 {% endfor %}
+</div>
 
  

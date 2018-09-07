@@ -1,3 +1,6 @@
+$fa-font-path:        "../assets/fonts";
+
+
 $white:  #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -98,5 +101,6 @@ $theme-colors: (
   juri-light: $juri-light,
   juri-dark: $juri-dark,
   juri: $juri,
-  green-dark: $green-dark
+  green-dark: $green-dark,
+  green: $green
 ) ;

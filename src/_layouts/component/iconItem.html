@@ -1,0 +1,16 @@
+---
+ src: 'no-image'
+ page.height: 250px
+ page.width: 250px
+---
+
+{::options parse_block_html="false" /}
+<article class="d-inline-block mx-4 py-3" style="width:{{page.width | default: 300 }}">
+    <header class="mb-2">
+        <i class="{{ page.icon-class }} icon-header-circle"></i>
+        <h3 class="text-center font-weight-bold">{{page.title}}</h3>
+    </header>
+    <summary class="my-auto text-center">
+        {{ page.content }}
+    </summary>
+</article>

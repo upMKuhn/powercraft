@@ -1,0 +1,22 @@
+---
+ src: 'no-image'
+ page.height: 250px
+ page.width: 250px
+---
+
+{::options parse_block_html="false" /}
+<article class="d-inline-flex shadow shadow--hover" style="height:{{page.height}}">
+    <header class="u-position--relative">
+        {{ src }}
+        {% if page.src != null %}
+            {% asset {{page.src}} width="{{page.width}}"  height="{{page.height}}" class="img--cover" %}
+        {% endif %}
+        <div class="e-overlay e-overlay--hover-juri text-white">
+            <h3 class="u-position--absolute-center-text"> {{page.title}} </h3>
+        </div>
+    </header>
+    <summary class="px-4 py-4 my-auto">
+        <h5 class="text-center">{{page.title}}</h5>
+        {{ page.content }}
+    </summary>
+</article>

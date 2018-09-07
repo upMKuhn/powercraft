@@ -48,6 +48,13 @@ module.exports = function(grunt) {
       options: {
         separator: '\n',
       },
+    
+      cssImports: {
+
+        src: [ 'node_modules/video.js/dist/video-js.min.css' ],
+        dest: 'assets/dist/includes.css',
+        
+      },
 
       jsDependencies: {
         footer: '\n',

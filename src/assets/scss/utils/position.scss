@@ -13,3 +13,9 @@
 }
 
 .u-position--relative { position: relative; }
+
+.u-position--absolute-center-text {
+     position: absolute;
+     left: 0;
+     top: calc(50% - 1.2em);
+}
