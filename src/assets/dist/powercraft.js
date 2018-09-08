@@ -9,16 +9,12 @@ $.getScript('//'+host + ':35729/livereload.js', function(){
 function onJqueryLoaded() {
 
     function updateViewportPlugin() {
-        $('.animated-fov:belowTheViewportPartly(-150)').each(function(i,elem) {
+        $('.animated-fov:in-viewport(-100)').each(function(i,elem) {
             console.log('hello')
             const classesToAdd = $(elem).data('on-enter');
             $(elem).addClass(classesToAdd);
         })
     
-        $('.animated-fov:aboveTheViewportPartly(-150)').each(function(i, elem) {
-            const classesToAdd = $(elem).data('on-leave');
-            $(elem).removeClass(classesToAdd);
-        })
     }
     
     $(window).resize(updateViewportPlugin)
