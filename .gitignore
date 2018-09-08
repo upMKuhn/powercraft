@@ -8,3 +8,4 @@
 **/logs/
 logs/*
 config/front.conf
+config/config.d/.htpasswd
