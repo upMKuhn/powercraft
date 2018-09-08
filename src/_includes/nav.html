@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light {{include.class}}">
+<nav class="navbar navbar-expand-md navbar-light bg-light {{include.class}}">
 
 	<a class="navbar-brand u-opacity--" href="/">
 		<!--img src="/assets/img/logo-dark/logo-new.png"  class="p-2" height="60px"-->
@@ -10,7 +10,8 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav ml-auto">
-				{% for node in site.pages %}
+                {% assign pages =  site.pages | where_exp: "item", "item.nav_ignore == nil"  %}
+				{% for node in pages %}
 				{% if node.title && page.url == node.url %}
 					<li class="nav-item active pl-1 pr-1">
 						<a class="nav-link" href="{{node.url}}">{{node.title}} <span class="sr-only">(current)</span></a>

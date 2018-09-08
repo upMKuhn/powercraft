@@ -49,6 +49,9 @@ h2 {
     }
 } 
 
+.animated-fov {
+    transition: all ease-in 2s;
+}
 
 @import '../../bower_components/bootstrap/scss/_variables.scss';
 

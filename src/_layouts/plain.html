@@ -1,21 +1,22 @@
 <html>
     <head>
         <title>{{ page.title }}</title>
-        {% asset powercraft.scss media="none" onload="if(media!='all')media='all'" %}
-        {% asset includes.css   media="none" onload="if(media!='all')media='all'" %}
+        {% asset powercraft.scss %}
+        {% asset includes.css  %}
         <meta charset="utf-8">
         <meta name="HandheldFriendly" content="true">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
         <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" async="true">
     </head>
     <body class="u-overflow-x--none">
         
         {{ content }}
 
-        {% asset includes.min.js async="true"%}
+        {% asset includes.min.js async="true" %}
         {% asset powercraft.min.js async="true" %}
         <link rel="shortcut icon" type="image/png" href="{{ "favicon.ico" | relative_url}}"/>
     </body>

@@ -5,7 +5,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-css-url-replace');
+  grunt.loadNpmTasks('grunt-babel');
 
+  const babel = require('@babel/core')
 
   var readYaml = require('read-yaml');
   let theBaseDir = '';
@@ -44,6 +46,26 @@ module.exports = function(grunt) {
         }
     },
 
+    babel: {
+        options: {
+          sourceMap: false,
+          compact: true,
+          presets: [['@babel/preset-env', {
+            "targets": "> 0.25%, not dead",
+            modules: false
+          }]]
+        },
+        dist: {
+          files:[{
+            "expand": true,
+            "cwd": "assets/dist",
+            "src": ["includes.js", 'powercraft.js'],
+            "dest": "assets/dist",
+            "ext": ".min.js"
+        }]
+        }
+    },
+
     concat: {
       options: {
         separator: '\n',
@@ -60,14 +82,12 @@ module.exports = function(grunt) {
         footer: '\n',
         banner: '\n',
         src: [
-          'bower_components/popper.js/dist/popper.min.js',
-          'bower_components/jquery/dist/jquery.min.js',
-          'bower_components/tether/dist/js/tether.min.js',
-          'bower_components/bootstrap/dist/js/bootstrap.min.js',
-          'node_modules/video.js/dist/video.min.js',
-          'node_modules/photoswipe/dist/photoswipe.min.js',
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/is-in-viewport/lib/isInViewport.min.js',
+            'node_modules/video.js/dist/video.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
       ],
-        dest: 'assets/dist/includes.min.js',
+        dest: 'assets/dist/includes.js',
       },
 
       js: {
@@ -86,15 +106,15 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'assets/dist/powercraft.min.js': ['assets/dist/powercraft.js'],
+          'assets/dist/powercraft.min.js': ['assets/dist/includes.babel.js' ,'assets/dist/powercraft.babel.js'],
         }
       }
     },
     
     watch: {
       mywatch: {
-        files: ['./assets/js/*.*', './assets/scss/**/*', './assets/img/*.*'],
-        tasks: ['sass', 'css_url_replace', 'concat'],
+        files: ['./assets/js/*.*', './assets/img/*.*'],
+        tasks: ['babel', 'concat'],
         options: {
           interrupt: true,
           spawn: true,
@@ -113,5 +133,5 @@ module.exports = function(grunt) {
   });
 
 
-  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'babel']);
 };

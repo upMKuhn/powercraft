@@ -1,6 +1,7 @@
 ---
+ page.padding: p-5
 ---
-<section class="p-5 {{page.class}}">
+<section class="{{page.padding | default: 'p-5' }} {{page.class}}">
     <div class="container">
         {{ page.content }}
     </div>
