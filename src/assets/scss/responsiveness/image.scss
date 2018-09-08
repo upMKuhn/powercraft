@@ -1,20 +1,56 @@
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+  
+    @return $number;
+  }
+
 // Retina image
 //
 // Short retina mixin for setting background-image and -size. Note that the
 // spelling of `min--moz-device-pixel-ratio` is intentional.
 @mixin imageResized($imageSrc) {
-    
-    @include media-breakpoint-down(lg) {
-        background-image: url(asset_path("#{$imageSrc} magick:resize=100x100^ magick:gravity=center magick:crop=100x100+0+0 magick:quality=90"));
-    }
+/**
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+*/  
 
-        
-    @include media-breakpoint-up(lg) {
-        background-image: url(asset_path("#{$imageSrc}"));
+
+$widths: (
+  xs: 575px,
+  sm: 767px,
+  md: 991px,
+  lg: 1999px,
+  xl: 2500px
+) !default;
+
+
+  @each $name, $width_var in $grid-breakpoints {
+
+        @if $name != 'xl' {
+            @include media-breakpoint-down($name) {
+                background-image: url(asset_path("#{$imageSrc} magick:resize=#{strip-unit($width_var)} magick:quality=80"));
+                @if $name != 'xs' {
+                    max-width: $width_var;
+                } @else {
+                    max-width: $width_var;
+                }
+            }
+        } @else {
+            background-image: url(asset_path("#{$imageSrc} magick:quality=80"));
+        }
+
     }
-    
 }
 
 .img--cover {
     object-fit: cover;
 }
+

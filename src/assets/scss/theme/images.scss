@@ -1,5 +1,8 @@
 
 .img-bk--advanture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
     @include imageResized("adventure.jpg");
 }
 
