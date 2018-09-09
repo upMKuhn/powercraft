@@ -23,6 +23,8 @@ plugins_dir:
 markdown: kramdown
 exclude: ['bower_components', 'node_modules']
 
+analyticsCode: UA-60175551-2
+
 #language settings
 languages: ['en']
 exclude_from_localizations: ['assets', 'dist', 'node_modules', '.sass-cache', 'bower_components']
