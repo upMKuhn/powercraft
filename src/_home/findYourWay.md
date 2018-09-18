@@ -11,7 +11,7 @@
 {: .mb-4}
 
 {% assign childComponents = site.findYourWayPoints  | sort: 'index' %}
-<div class="d-flex flex-wrap d-flex justify-content-center ">
+<div class="d-flex flex-wrap d-flex justify-content-center list-unstyled">
 {% for child in childComponents %}
 {::options parse_block_html="false" /}
 {{ child.output | markdownify}}
